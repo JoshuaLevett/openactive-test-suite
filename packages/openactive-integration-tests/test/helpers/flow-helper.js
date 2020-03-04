@@ -9,7 +9,7 @@ class FlowHelper {
     return this.state.getMatch();
   });
 
-  C1 = pMemoize(async C1 => {
+  C1 = pMemoize(async ({flowName, requestTemplate}) => {
     await this.getMatch();
 
     return this.state.putOrderQuoteTemplate();

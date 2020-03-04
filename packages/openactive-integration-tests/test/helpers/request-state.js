@@ -76,8 +76,8 @@ class RequestState {
     return this.apiResponse.body.data.superEvent.organizer["@id"];
   }
 
-  async putOrderQuoteTemplate () {
-    let result = await this.requestHelper.putOrderQuoteTemplate(this.uuid, this);
+  async putOrderQuoteTemplate ({flowName, requestTemplate}) {
+    let result = await this.requestHelper.putOrderQuoteTemplate(this.uuid, {flowName, requestTemplate});
 
     this.c1Response = result;
 

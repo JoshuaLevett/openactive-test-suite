@@ -25,10 +25,10 @@ module.exports = data => {
       "@type": "Organization",
       "@id": `${data.sellerId}`
     },
-    orderedItem: [
-      {
+    orderedItem: data.orderItems.map((orderItem) => {
+      return {
         "@type": "OrderItem",
-        position: 0,
+        position: data.position,
         acceptedOffer: {
           "@type": "Offer",
           "@id": `${data.offerId}`
@@ -37,7 +37,7 @@ module.exports = data => {
           "@type": "ScheduledSession",
           "@id": `${data.opportunityId}`
         }
-      }
-    ]
+      };
+    })
   };
 };

@@ -1,3 +1,4 @@
+const { URL, URLSearchParams } = require("url");
 const assert = require("assert");
 const chakram = require("chakram");
 const uuidv5 = require("uuid/v5");
@@ -59,10 +60,10 @@ class RequestHelper {
     return respObj;
   }
 
-  async putOrderQuoteTemplate(uuid, params) {
-    let payload = this.bookingTemplate(this.logger, c1req, params);
+  async putOrderQuoteTemplate(uuid, params, {flowName, requestTemplate}) {
+    let payload = this.bookingTemplate(this.logger, requestTemplate || c1req, params);
 
-    this.logger && this.logger.recordRequest('C1', payload);
+    this.logger && this.logger.recordRequest(flowName || 'C1', payload);
 
     let c1Response = await chakram.put(
       BOOKING_API_BASE + "order-quote-templates/" + uuid,
@@ -72,7 +73,7 @@ class RequestHelper {
       }
     );
 
-    this.logger && this.logger.recordResponse('C1', c1Response);
+    this.logger && this.logger.recordResponse(flowName || 'C1', c1Response);
 
     return c1Response;
   }
@@ -129,6 +130,15 @@ class RequestHelper {
     this.logger && this.logger.recordResponse('U', uResponse);
 
     return uResponse;
+  }
+
+  async getRandomEvent(params) {
+    let url = new URL("http://localhost:3000/get-random-opportunity");
+    url.search = new URLSearchParams(params).toString();
+
+    let respObj = await chakram.get(url);
+
+    return respObj;
   }
 
   async createScheduledSession(event, params) {
