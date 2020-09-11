@@ -1,0 +1,156 @@
+{
+  "flow": {
+    "delete-order": {
+      "response": {
+        "body": {
+          "@context": "https://openactive.io/",
+          "@type": "NotFoundError",
+          "name": "The Booking System does not have the generic resource specified.",
+          "statusCode": 404
+        },
+        "responseTime": 18.363663,
+        "status": 404,
+        "statusMessage": "Not Found",
+        "headers": {
+          "connection": "close",
+          "date": "Fri, 11 Sep 2020 10:34:58 GMT",
+          "content-type": "application/vnd.openactive.booking+json; version=1",
+          "server": "Kestrel",
+          "content-length": "152"
+        }
+      }
+    },
+    "Delete Order": {
+      "response": {
+        "specs": [
+          {
+            "ancestorTitles": [
+              "common-error-conditions",
+              "not-found",
+              "Multiple",
+              "Delete Order"
+            ],
+            "duration": 19,
+            "failureMessages": [],
+            "fullName": "common-error-conditions not-found Multiple Delete Order should return a NotFoundError",
+            "location": null,
+            "numPassingAsserts": 0,
+            "status": "passed",
+            "title": "should return a NotFoundError"
+          }
+        ]
+      }
+    }
+  },
+  "logs": [
+    {
+      "ancestorTitles": [
+        "common-error-conditions",
+        "not-found",
+        "Multiple",
+        "Delete Order"
+      ],
+      "title": "should return a NotFoundError",
+      "fullName": "common-error-conditions not-found Multiple Delete Order should return a NotFoundError",
+      "type": "request",
+      "stage": "delete-order",
+      "request": {
+        "method": "DELETE",
+        "url": "https://localhost:5001/api/openbooking/orders/84610e6e-fe86-530a-904d-e9551d4db52d",
+        "jsonBody": null,
+        "requestOptions": {
+          "headers": {
+            "Content-Type": "application/vnd.openactive.booking+json; version=1",
+            "X-OpenActive-Test-Client-Id": "test",
+            "X-OpenActive-Test-Seller-Id": "https://localhost:5001/api/identifiers/sellers/1"
+          },
+          "timeout": 10000
+        }
+      },
+      "isPending": false,
+      "duration": 0,
+      "response": {
+        "body": {
+          "@context": "https://openactive.io/",
+          "@type": "NotFoundError",
+          "name": "The Booking System does not have the generic resource specified.",
+          "statusCode": 404
+        },
+        "responseTime": 18.363663,
+        "status": 404,
+        "statusMessage": "Not Found",
+        "headers": {
+          "connection": "close",
+          "date": "Fri, 11 Sep 2020 10:34:58 GMT",
+          "content-type": "application/vnd.openactive.booking+json; version=1",
+          "server": "Kestrel",
+          "content-length": "152"
+        }
+      }
+    },
+    {
+      "type": "spec",
+      "ancestorTitles": [
+        "common-error-conditions",
+        "not-found",
+        "Multiple",
+        "Delete Order"
+      ],
+      "title": "should return a NotFoundError",
+      "fullName": "common-error-conditions not-found Multiple Delete Order should return a NotFoundError",
+      "spec": {
+        "ancestorTitles": [
+          "common-error-conditions",
+          "not-found",
+          "Multiple",
+          "Delete Order"
+        ],
+        "duration": 19,
+        "failureMessages": [],
+        "fullName": "common-error-conditions not-found Multiple Delete Order should return a NotFoundError",
+        "location": null,
+        "numPassingAsserts": 0,
+        "status": "passed",
+        "title": "should return a NotFoundError"
+      }
+    }
+  ],
+  "timestamp": "Fri Sep 11 2020 10:34:59 GMT+0000 (Coordinated Universal Time)",
+  "config": {
+    "testCategory": "core",
+    "testFeature": "common-error-conditions",
+    "testFeatureImplemented": true,
+    "testIdentifier": "not-found",
+    "testName": "Expect a NotFoundError for Orders that do not exist",
+    "testDescription": "Runs Order Cancellation for an non-existent Order (with a fictional UUID), expecting an NotFoundError error to be returned"
+  },
+  "implemented": true,
+  "testFileIdentifier": "common-error-conditions not-found Multiple",
+  "suites": [
+    [
+      "common-error-conditions",
+      "not-found",
+      "Multiple"
+    ],
+    [
+      "common-error-conditions",
+      "not-found",
+      "Multiple",
+      "Delete Order"
+    ]
+  ],
+  "title": "common-error-conditions >> not-found (Multiple)",
+  "workingLog": "",
+  "specs": {
+    "common-error-conditions,not-found,Multiple,Delete Order": [
+      "should return a NotFoundError"
+    ]
+  },
+  "description": "Runs Order Cancellation for an non-existent Order (with a fictional UUID), expecting an NotFoundError error to be returned",
+  "opportunityType": "Multiple",
+  "baseAncestorTitles": [
+    "common-error-conditions",
+    "not-found",
+    "Multiple"
+  ]
+}
