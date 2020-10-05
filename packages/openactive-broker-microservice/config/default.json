@@ -1,6 +1,6 @@
 {
-  "datasetSiteUrl": "https://openactive-reference-implementation.azurewebsites.net/openactive",
-  "_local_datasetSiteUrl": "https://localhost:44396/openactive",
+  "datasetSiteUrl": "https://localhost:44316/opendata/openactive",
+  "_local_datasetSiteUrl": "https://localhost:44316/opendata/openactive",
   "requestLogging": false,
   "waitForHarvestCompletion": true,
   "verbose": false,

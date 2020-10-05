@@ -1,11 +1,11 @@
 {
   "outputPath": "./output/",
-  "useRandomOpportunities": true,
+  "useRandomOpportunities": false,
   "generateConformanceCertificate": true,
-  "conformanceCertificateId": "https://www.example.com/",
+  "conformanceCertificateId": "https://www.playwaze.com/",
   "bookableOpportunityTypesInScope": {
     "ScheduledSession": true,
-    "FacilityUseSlot": true,
+    "FacilityUseSlot": false,
     "IndividualFacilityUseSlot": false,
     "CourseInstance": false,
     "CourseInstanceSubEvent": false,
@@ -15,7 +15,7 @@
     "OnDemandEvent": false
   },
   "implementedFeatures": {
-    "test-interface": null,
+    "test-interface": true,
     "opportunity-feed": null,
     "dataset-site": true,
     "availability-check": true,
@@ -28,7 +28,7 @@
     "multiple-sellers": true,
     "payment-reconciliation-detail-validation": null,
     "booking-window": null,
-    "customer-requested-cancellation": true,
+    "customer-requested-cancellation": null,
     "cancellation-window": null,
     "seller-requested-cancellation": null,
     "seller-requested-cancellation-message": null,
@@ -65,21 +65,25 @@
     "terms-of-service-with-consent": null,
     "terms-of-service-with-consent-with-date-modified": null,
     "booking-partner-authentication": null,
-    "minimal-proposal": true
+    "minimal-proposal": null
   },
   "testDatasetIdentifier": "uat-ci",
   "sellers": {
     "primary": {
-      "@type": "Organization",
-      "@id": "https://openactive-reference-implementation.azurewebsites.net/api/identifiers/sellers/1",
+	  "@type": "Organization",
+      "@id": "https://localhost:44316/api/identifiers/sellers/5544221",
       "requestHeaders": {
         "X-OpenActive-Test-Client-Id": "test",
-        "X-OpenActive-Test-Seller-Id": "https://openactive-reference-implementation.azurewebsites.net/api/identifiers/sellers/1"
+        "X-OpenActive-Test-Seller-Id": "https://localhost:44316/api/identifiers/sellers/5544221"
       }
     },
     "secondary": {
       "@type": "Organization",
-      "@id": "https://openactive-reference-implementation.azurewebsites.net/api/identifiers/sellers/3"
+      "@id": "https://localhost:44316/api/identifiers/sellers/vo1sahdo32k",
+      "requestHeaders": {
+        "X-OpenActive-Test-Client-Id": "test2",
+        "X-OpenActive-Test-Seller-Id": "https://localhost:44316/api/identifiers/sellers/vo1sahdo32k"
+      }
     }
   }
 }
