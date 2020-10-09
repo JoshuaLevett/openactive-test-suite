@@ -71,18 +71,18 @@
   "sellers": {
     "primary": {
 	  "@type": "Organization",
-      "@id": "https://localhost:44316/api/identifiers/sellers/5544221",
+      "@id": "https://localhost:44316/opendata/identifiers/sellers/5544221",
       "requestHeaders": {
         "X-OpenActive-Test-Client-Id": "test",
-        "X-OpenActive-Test-Seller-Id": "https://localhost:44316/api/identifiers/sellers/5544221"
+        "X-OpenActive-Test-Seller-Id": "https://localhost:44316/opendata/identifiers/sellers/5544221"
       }
     },
     "secondary": {
       "@type": "Organization",
-      "@id": "https://localhost:44316/api/identifiers/sellers/vo1sahdo32k",
+      "@id": "https://localhost:44316/opendata/identifiers/sellers/vo1sahdo32k",
       "requestHeaders": {
         "X-OpenActive-Test-Client-Id": "test2",
-        "X-OpenActive-Test-Seller-Id": "https://localhost:44316/api/identifiers/sellers/vo1sahdo32k"
+        "X-OpenActive-Test-Seller-Id": "https://localhost:44316/opendata/identifiers/sellers/vo1sahdo32k"
       }
     }
   }
