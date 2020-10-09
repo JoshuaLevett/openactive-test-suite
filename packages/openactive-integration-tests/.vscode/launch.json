@@ -8,6 +8,12 @@
       "type": "node-terminal"
     },
     {
+      "command": "npm start --runInBand -- test/features/details-capture/",
+      "name": "Test details capture",
+      "request": "launch",
+      "type": "node-terminal"
+    },
+    {
       "command": "npm start --runInBand -- test/features/payment/simple-book-with-payment",
       "name": "Test simple booking with payment",
       "request": "launch",
